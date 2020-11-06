@@ -155,8 +155,10 @@ tftSave_t *screenPage9 = &screenSave9;
 
 
 	
-	int16_t HDW = 1024;
-	int16_t VDH = 600;
+	// int16_t HDW = 1024;
+	// int16_t VDH = 600;
+	int16_t HDW = 400;
+	int16_t VDH = 1280;
 	
 	//Physical size of screen - these numbers won't change even if rotation is applied or status bar occupies some screen area
 	int16_t SCREEN_WIDTH  = HDW;
@@ -190,7 +192,7 @@ RA8876_t3::RA8876_t3(const uint8_t CSp, const uint8_t RSTp, const uint8_t mosi_p
 //**************************************************************//
 // Ra8876_begin()
 //**************************************************************//
-FLASHMEM boolean RA8876_t3::begin(uint32_t spi_clock) 
+boolean RA8876_t3::begin(uint32_t spi_clock) 
 { 
   //initialize the bus for Teensy 3.6/4.0
   // Figure out which SPI Buss to use.  
